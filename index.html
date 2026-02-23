@@ -6,28 +6,45 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
 <div class="main">
     <h1>오늘 나의 감정은?</h1>
     <div class="expression" id="expression">? + ? =</div>
-    <button class="main-btn" onclick="openModal()">감정 고르기</button>
+    <button class="main-btn" onclick="openEmojiModal()">감정 고르기</button>
 </div>
 
 <!-- 이모지 모달 -->
 <div class="modal" id="emojiModal">
     <h2>이모지 선택</h2>
     <div class="emoji-grid" id="emojiGrid"></div>
+    <br>
+    <button onclick="closeEmojiModal()">닫기</button>
+</div>
+
+<!-- 설정 모달 -->
+<div class="modal" id="settingsModal">
+    <h2>캐릭터 설정</h2>
+
+    <label>이름</label>
+    <input type="text" id="studentName">
+
+    <label>학급 번호</label>
+    <input type="text" id="studentClass">
+
+    <label>프로필 이미지</label>
+    <input type="file" id="profileImage" accept="image/*">
+
     <br><br>
-    <button class="close-btn" onclick="closeModal()">닫기</button>
+    <button onclick="saveSettings()">저장</button>
+    <button onclick="closeSettingsModal()">닫기</button>
 </div>
 
 <!-- 설정 버튼 -->
-<img src="settings.png" class="setting-btn" onclick="alert('설정창 연결 예정')">
+<img src="settings.png" class="setting-btn" onclick="openSettingsModal()">
 
 <script src="script.js"></script>
-
 </body>
 </html>
