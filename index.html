@@ -4,40 +4,49 @@
 <meta charset="UTF-8">
 <title>감정 교실</title>
 
-<!-- 낙서 폰트 -->
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<button id="settingsBtn">⚙</button>
+<!-- 설정 버튼 SVG -->
+<button id="settingsBtn">
+<svg viewBox="0 0 24 24" width="36" height="36">
+<path fill="none" stroke="black" stroke-width="2"
+d="M12 8a4 4 0 100 8 4 4 0 000-8zm8.94 4a7.94 7.94 0 00-.34-2l2.1-1.65-2-3.46-2.49 1a8.12 8.12 0 00-1.73-1L14.5 2h-5l-.98 2.89a8.12 8.12 0 00-1.73 1l-2.49-1-2 3.46 2.1 1.65a7.94 7.94 0 000 4l-2.1 1.65 2 3.46 2.49-1c.53.39 1.11.73 1.73 1L9.5 22h5l.98-2.89c.62-.27 1.2-.61 1.73-1l2.49 1 2-3.46-2.1-1.65c.22-.64.34-1.32.34-2z"/>
+</svg>
+</button>
 
 <h1>오늘 나의 감정은?</h1>
 
 <div id="formula">
-  <span id="emoji1">❔</span>
-  <span class="operator"> + </span>
-  <span id="emoji2">❔</span>
-  <span class="operator"> = </span>
-  <img id="resultImg" />
+<span id="emoji1">❔</span>
++
+<span id="emoji2">❔</span>
+=
+<img id="resultImg">
 </div>
 
-<div id="emojiGrid"></div>
+<button id="openPicker">감정찾기</button>
 
-<button id="completeBtn" disabled>감정 선택 완료</button>
+<!-- 이모지 선택 팝업 -->
+<div id="emojiModal" class="hidden">
+  <div class="modalBox">
+    <h2>이모지 선택</h2>
+    <div id="emojiGrid"></div>
+    <button id="closeEmoji">닫기</button>
+  </div>
+</div>
 
 <!-- 설정 팝업 -->
 <div id="settingsModal" class="hidden">
-  <div class="modalContent">
+  <div class="modalBox">
     <h2>캐릭터 설정</h2>
     <input type="text" id="studentName" placeholder="이름">
     <input type="text" id="classNumber" placeholder="학급 번호">
     <input type="file" id="avatarUpload" accept="image/png">
-    <div class="modalButtons">
-      <button id="saveSettings">저장</button>
-      <button id="closeSettings">닫기</button>
-    </div>
+    <button id="saveSettings">저장</button>
+    <button id="closeSettings">닫기</button>
   </div>
 </div>
 
