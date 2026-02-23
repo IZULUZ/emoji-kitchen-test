@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+#emoji-list span {
+  font-size: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#result-img {
+  margin-top: 20px;
+  width: 200px;
+}
