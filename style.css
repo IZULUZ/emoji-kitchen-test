@@ -1,111 +1,83 @@
 body {
-  margin: 0;
-  padding: 40px;
-  font-family: 'Gaegu', cursive;
-  background-color: #ffffff;
-  overflow-x: hidden;
+  margin:0;
+  padding:40px;
+  font-family: 'Hi Melody', cursive;
+  background:#fff;
+  overflow-x:hidden;
 }
 
-/* 연한 낙서 배경 */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://www.transparenttextures.com/patterns/sketchy.png");
-  opacity: 0.07;
-  z-index: -1;
+/* 낙서 배경 SVG */
+body::before{
+content:"";
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background-image:url("https://www.transparenttextures.com/patterns/doodles.png");
+opacity:0.08;
+z-index:-1;
 }
 
-h1 {
-  font-size: 60px;
-  margin-bottom: 30px;
+h1{
+font-size:70px;
 }
 
-/* 수식 영역 */
-#formula {
-  font-size: 50px;
-  margin-bottom: 40px;
+#formula{
+font-size:50px;
+margin:30px 0;
 }
 
-.operator {
-  margin: 0 15px;
+#resultImg{
+width:120px;
+vertical-align:middle;
 }
 
-#resultImg {
-  width: 120px;
-  vertical-align: middle;
+button{
+font-family:'Hi Melody';
+font-size:28px;
+padding:8px 20px;
+border:2px solid black;
+background:none;
+cursor:pointer;
 }
 
-/* 이모지 전체 폭 사용 */
-#emojiGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 28px;
-  max-width: 100%;
-}
-
-#emojiGrid span {
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-#emojiGrid span:hover {
-  transform: scale(1.2);
-}
-
-/* 버튼 */
-button {
-  font-family: 'Gaegu', cursive;
-  font-size: 24px;
-  padding: 10px 20px;
-  border: 2px solid black;
-  background: none;
-  cursor: pointer;
-}
-
-/* 설정 버튼 */
-#settingsBtn {
-  position: fixed;
-  top: 20px;
-  right: 25px;
-  font-size: 30px;
-  border: none;
-  background: none;
-  cursor: pointer;
+#settingsBtn{
+position:fixed;
+top:20px;
+right:20px;
+border:none;
+background:none;
+cursor:pointer;
 }
 
 /* 팝업 */
-#settingsModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hidden{display:none;}
+
+#emojiModal,#settingsModal{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.3);
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-.modalContent {
-  background: white;
-  padding: 30px;
-  border: 3px solid black;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.modalBox{
+background:white;
+padding:30px;
+border:3px solid black;
+max-width:800px;
+max-height:80vh;
+overflow:auto;
 }
 
-.modalButtons {
-  display: flex;
-  justify-content: space-between;
+#emojiGrid{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+font-size:26px;
 }
 
-.hidden {
-  display: none;
+#emojiGrid span{
+cursor:pointer;
 }
