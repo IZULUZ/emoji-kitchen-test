@@ -2,10 +2,16 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>감정 교실 베타</title>
+<title>감정 교실</title>
+
+<!-- 낙서 폰트 -->
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<button id="settingsBtn">⚙</button>
 
 <h1>오늘 나의 감정은?</h1>
 
@@ -21,16 +27,17 @@
 
 <button id="completeBtn" disabled>감정 선택 완료</button>
 
-<button id="settingsBtn">⚙</button>
-
+<!-- 설정 팝업 -->
 <div id="settingsModal" class="hidden">
   <div class="modalContent">
-    <h3>기본 설정</h3>
-    <input type="text" id="studentName" placeholder="이름"><br>
-    <input type="text" id="classNumber" placeholder="학급 번호"><br>
-    <input type="file" id="avatarUpload" accept="image/png"><br>
-    <button id="saveSettings">저장</button>
-    <button id="closeSettings">닫기</button>
+    <h2>캐릭터 설정</h2>
+    <input type="text" id="studentName" placeholder="이름">
+    <input type="text" id="classNumber" placeholder="학급 번호">
+    <input type="file" id="avatarUpload" accept="image/png">
+    <div class="modalButtons">
+      <button id="saveSettings">저장</button>
+      <button id="closeSettings">닫기</button>
+    </div>
   </div>
 </div>
 
